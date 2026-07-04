@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Open Webui Assistant</string>
+    <string name="settings_title">Assistant Settings</string>
+    <string name="url_hint">Open WebUI Server URL</string>
+    <string name="save_button">Save</string>
+    <string name="url_saved">Settings Saved!</string>
+    <string name="full_screen_mode">Open as Full Screen Activity (Stub)</string>
+    <string name="auto_dictate_mode">Auto-start Dictation</string>
+    <string name="auto_voice_call_mode">Auto-start Voice Call</string>
+    <string name="how_to_enable">To enable the assistant, go to Settings -> Apps -> Default Apps -> Digital assistant app and select Open Webui Assistant.</string>
+</resources>
