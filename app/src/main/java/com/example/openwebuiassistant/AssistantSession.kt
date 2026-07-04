@@ -39,7 +39,7 @@ class AssistantSession(context: Context) : VoiceInteractionSession(context) {
                     
                     var selector = ""
                     if (autoCall) {
-                        selector = "'button[aria-label=\"Call\"]'"
+                        selector = "'button[aria-label=\"Voice mode\"]'"
                     } else if (autoDictate) {
                         selector = "'button[aria-label=\"Voice Input\"]'"
                     }

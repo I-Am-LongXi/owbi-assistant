@@ -44,6 +44,18 @@ class MainActivity : AppCompatActivity() {
         autoDictateSwitch.isChecked = prefs.getBoolean(KEY_AUTO_DICTATE, true) // default to true since we enabled it earlier
         autoVoiceCallSwitch.isChecked = prefs.getBoolean(KEY_AUTO_VOICE_CALL, false)
 
+        autoDictateSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                autoVoiceCallSwitch.isChecked = false
+            }
+        }
+        
+        autoVoiceCallSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                autoDictateSwitch.isChecked = false
+            }
+        }
+
         saveButton.setOnClickListener {
             val url = urlEditText.text.toString().trim()
             
