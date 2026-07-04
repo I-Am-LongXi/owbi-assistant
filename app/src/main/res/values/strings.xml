@@ -5,7 +5,7 @@
     <string name="url_hint">Open WebUI Server URL</string>
     <string name="save_button">Save</string>
     <string name="url_saved">Settings Saved!</string>
-    <string name="full_screen_mode">Open as Full Screen Activity (Stub)</string>
+    <string name="full_screen_mode">Open as Full Screen</string>
     <string name="auto_dictate_mode">Auto-start Dictation</string>
     <string name="auto_voice_call_mode">Auto-start Voice Call</string>
     <string name="how_to_enable">To enable the assistant, go to Settings -> Apps -> Default Apps -> Digital assistant app and select Owbi Assistant.</string>

@@ -83,8 +83,9 @@ class AssistantSession(context: Context) : VoiceInteractionSession(context) {
         val finalUrl = uri.buildUpon().build().toString() // ?call=true no longer forced since we inject JS for both modes
 
         if (fullScreen) {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(finalUrl)).apply {
+            val intent = Intent(context, FullScreenActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                putExtra("URL", finalUrl)
             }
             context.startActivity(intent)
             hide()
