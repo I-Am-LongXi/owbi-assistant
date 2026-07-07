@@ -46,3 +46,8 @@ When making future changes, AI agents must strictly adhere to the following vers
   * The subject line must be a concise summary (under 50 characters).
   * The body must provide a detailed explanation of *why* the change was made, what files were touched, and any side-effects or considerations for future agents.
 * **Branching (Optional but Recommended):** For large features, create a separate branch rather than committing directly to `master`.
+
+### 7. App Versioning
+When making changes to the application (new features, bug fixes, UI updates, etc.), AI agents must:
+* **Bump Version:** Increment the `versionCode` and logically update the `versionName` in `app/build.gradle.kts`.
+* **Reflect Changes:** Include version bumps as part of the commit, or as a standalone `chore:` commit if done separately.
