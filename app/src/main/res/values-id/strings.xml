@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">Pengaturan Asisten</string>
+    <string name="url_hint">URL Server Open WebUI</string>
+    <string name="save_button">Simpan</string>
+    <string name="url_saved">Pengaturan Disimpan!</string>
+    <string name="full_screen_mode">Buka Layar Penuh</string>
+    <string name="auto_dictate_mode">Mulai Otomatis Dikte</string>
+    <string name="auto_voice_call_mode">Mulai Otomatis Panggilan Suara</string>
+    <string name="how_to_enable">Untuk mengaktifkan asisten, buka Pengaturan -> Aplikasi -> Aplikasi Default -> Aplikasi asisten digital dan pilih Owbi Assistant.</string>
+    <string name="disclaimer_text">Aplikasi ini adalah klien independen dan tidak berafiliasi dengan, didukung oleh, atau disponsori oleh Open WebUI Inc.</string>
+    <string name="mic_permission_required">Izin mikrofon diperlukan untuk interaksi suara.</string>
+    <string name="language_picker_title">Bahasa</string>
+</resources>

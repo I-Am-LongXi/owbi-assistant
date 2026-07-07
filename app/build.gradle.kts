@@ -5,13 +5,13 @@ plugins {
 
 android {
     namespace = "com.example.openwebuiassistant"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.owbi.assistant"
+        applicationId = "com.owbi_assistant"
         minSdk = 26
-        targetSdk = 34
-        versionCode = 4
+        targetSdk = 35
+        versionCode = 5
         versionName = "1.03"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -38,11 +38,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         viewBinding = true

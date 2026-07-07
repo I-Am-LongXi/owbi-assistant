@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">Configurações do Assistente</string>
+    <string name="url_hint">URL do Servidor Open WebUI</string>
+    <string name="save_button">Salvar</string>
+    <string name="url_saved">Configurações salvas!</string>
+    <string name="full_screen_mode">Abrir em tela cheia</string>
+    <string name="auto_dictate_mode">Início automático de ditado</string>
+    <string name="auto_voice_call_mode">Início automático de chamada de voz</string>
+    <string name="how_to_enable">Para ativar o assistente, vá para Configurações -> Aplicativos -> Aplicativos padrão -> Aplicativo de assistente digital e selecione Owbi Assistant.</string>
+    <string name="disclaimer_text">Este aplicativo é um cliente independente e não é afiliado, endossado ou patrocinado pela Open WebUI Inc.</string>
+    <string name="mic_permission_required">Permissão de microfone necessária para interações por voz.</string>
+    <string name="language_picker_title">Idioma</string>
+</resources>

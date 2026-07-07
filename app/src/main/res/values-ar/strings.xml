@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">إعدادات المساعد</string>
+    <string name="url_hint">رابط خادم Open WebUI</string>
+    <string name="save_button">حفظ</string>
+    <string name="url_saved">تم حفظ الإعدادات!</string>
+    <string name="full_screen_mode">فتح في وضع ملء الشاشة</string>
+    <string name="auto_dictate_mode">بدء الإملاء تلقائياً</string>
+    <string name="auto_voice_call_mode">بدء المكالمة الصوتية تلقائياً</string>
+    <string name="how_to_enable">لتمكين المساعد، انتقل إلى الإعدادات -> التطبيقات -> التطبيقات الافتراضية -> تطبيق المساعد الرقمي وحدد Owbi Assistant.</string>
+    <string name="disclaimer_text">هذا التطبيق هو عميل مستقل ولا يتبع لشركة Open WebUI Inc. أو يحظى برعايتها أو اعتمادها.</string>
+    <string name="mic_permission_required">إذن الميكروفون مطلوب للتفاعلات الصوتية.</string>
+    <string name="language_picker_title">اللغة</string>
+</resources>

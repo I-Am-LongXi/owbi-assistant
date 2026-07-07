@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">助手设置</string>
+    <string name="url_hint">Open WebUI 服务器 URL</string>
+    <string name="save_button">保存</string>
+    <string name="url_saved">设置已保存！</string>
+    <string name="full_screen_mode">全屏打开</string>
+    <string name="auto_dictate_mode">自动开始听写</string>
+    <string name="auto_voice_call_mode">自动开始语音通话</string>
+    <string name="how_to_enable">要启用助手，请转到 设置 -> 应用 -> 默认应用 -> 数字助手应用，然后选择 Owbi Assistant。</string>
+    <string name="disclaimer_text">此应用为独立客户端，与 Open WebUI Inc. 没有任何隶属、赞助或支持关系。</string>
+    <string name="mic_permission_required">语音交互需要麦克风权限。</string>
+    <string name="language_picker_title">语言</string>
+</resources>

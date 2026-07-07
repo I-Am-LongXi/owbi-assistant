@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">असिस्टेंट सेटिंग्स</string>
+    <string name="url_hint">Open WebUI सर्वर URL</string>
+    <string name="save_button">सेव करें</string>
+    <string name="url_saved">सेटिंग्स सेव हो गईं!</string>
+    <string name="full_screen_mode">फुल स्क्रीन में खोलें</string>
+    <string name="auto_dictate_mode">ऑटो-स्टार्ट डिक्टेशन</string>
+    <string name="auto_voice_call_mode">ऑटो-स्टार्ट वॉइस कॉल</string>
+    <string name="how_to_enable">असिस्टेंट को इनेबल करने के लिए, सेटिंग्स -> ऐप्स -> डिफ़ॉल्ट ऐप्स -> डिजिटल असिस्टेंट ऐप पर जाएं और Owbi Assistant चुनें।</string>
+    <string name="disclaimer_text">यह ऐप एक स्वतंत्र क्लाइंट है और Open WebUI Inc. से संबद्ध, समर्थित या प्रायोजित नहीं है।</string>
+    <string name="mic_permission_required">वॉइस इंटरैक्शन के लिए माइक्रोफ़ोन की अनुमति आवश्यक है।</string>
+    <string name="language_picker_title">भाषा</string>
+</resources>

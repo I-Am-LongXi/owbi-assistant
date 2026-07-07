@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">অ্যাসিস্ট্যান্ট সেটিংস</string>
+    <string name="url_hint">Open WebUI সার্ভার URL</string>
+    <string name="save_button">সেভ করুন</string>
+    <string name="url_saved">সেটিংস সেভ করা হয়েছে!</string>
+    <string name="full_screen_mode">ফুল স্ক্রিনে খুলুন</string>
+    <string name="auto_dictate_mode">অটো-স্টার্ট ডিকটেশন</string>
+    <string name="auto_voice_call_mode">অটো-স্টার্ট ভয়েস কল</string>
+    <string name="how_to_enable">অ্যাসিস্ট্যান্ট সক্ষম করতে, সেটিংস -> অ্যাপস -> ডিফল্ট অ্যাপস -> ডিজিটাল অ্যাসিস্ট্যান্ট অ্যাপ-এ যান এবং Owbi Assistant নির্বাচন করুন।</string>
+    <string name="disclaimer_text">এই অ্যাপটি একটি স্বাধীন ক্লায়েন্ট এবং Open WebUI Inc. দ্বারা অনুমোদিত, স্পন্সর করা বা তাদের সাথে সম্পর্কিত নয়।</string>
+    <string name="mic_permission_required">ভয়েস ইন্টারঅ্যাকশনের জন্য মাইক্রোফোনের অনুমতি প্রয়োজন।</string>
+    <string name="language_picker_title">ভাষা</string>
+</resources>

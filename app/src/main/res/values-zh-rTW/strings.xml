@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Owbi Assistant</string>
+    <string name="settings_title">助理設定</string>
+    <string name="url_hint">Open WebUI 伺服器 URL</string>
+    <string name="save_button">儲存</string>
+    <string name="url_saved">設定已儲存！</string>
+    <string name="full_screen_mode">全螢幕開啟</string>
+    <string name="auto_dictate_mode">自動開始聽寫</string>
+    <string name="auto_voice_call_mode">自動開始語音通話</string>
+    <string name="how_to_enable">若要啟用助理，請前往「設定」->「應用程式」->「預設應用程式」->「數位助理應用程式」，然後選取 Owbi Assistant。</string>
+    <string name="disclaimer_text">此應用程式為獨立用戶端，與 Open WebUI Inc. 沒有任何附屬、贊助或支持關係。</string>
+    <string name="mic_permission_required">語音互動需要麥克風權限。</string>
+    <string name="language_picker_title">語言</string>
+</resources>
