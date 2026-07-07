@@ -1,7 +1,10 @@
 package com.example.openwebuiassistant
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.service.voice.VoiceInteractionSession
@@ -10,11 +13,14 @@ import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 
 class AssistantSession(context: Context) : VoiceInteractionSession(context) {
 
     private var webView: WebView? = null
 
+    @SuppressLint("InflateParams")
     override fun onCreateContentView(): View {
         val view = layoutInflater.inflate(R.layout.assistant_overlay, null)
         webView = view.findViewById(R.id.webview)
@@ -47,26 +53,42 @@ class AssistantSession(context: Context) : VoiceInteractionSession(context) {
                     view?.evaluateJavascript("""
                         (function() {
                             if (window.__voiceAutoStarted) return;
-                            var attempts = 0;
-                            var checkExist = setInterval(function() {
+                            
+                            function clickVoiceBtn() {
                                 var voiceBtn = document.querySelector($selector);
                                 if (voiceBtn) {
                                     window.__voiceAutoStarted = true;
                                     voiceBtn.click();
-                                    clearInterval(checkExist);
+                                    return true;
                                 }
-                                attempts++;
-                                if (attempts > 20) {
-                                    clearInterval(checkExist); // Stop after 10 seconds
-                                }
-                            }, 500);
+                                return false;
+                            }
+
+                            if (!clickVoiceBtn()) {
+                                var observer = new MutationObserver(function(mutations, obs) {
+                                    if (clickVoiceBtn()) {
+                                        obs.disconnect();
+                                    }
+                                });
+                                observer.observe(document.body, { childList: true, subtree: true });
+                            }
                         })();
                     """.trimIndent(), null)
                 }
             }
             webChromeClient = object : WebChromeClient() {
                 override fun onPermissionRequest(request: android.webkit.PermissionRequest) {
-                    request.grant(request.resources)
+                    if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                        request.grant(request.resources)
+                    } else {
+                        request.deny()
+                        Toast.makeText(context, R.string.mic_permission_required, Toast.LENGTH_LONG).show()
+                        val intent = Intent(context, MainActivity::class.java).apply {
+                            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        }
+                        context.startActivity(intent)
+                        hide()
+                    }
                 }
             }
         }

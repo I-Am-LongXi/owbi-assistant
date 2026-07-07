@@ -10,4 +10,5 @@
     <string name="auto_voice_call_mode">Auto-start Voice Call</string>
     <string name="how_to_enable">To enable the assistant, go to Settings -> Apps -> Default Apps -> Digital assistant app and select Owbi Assistant.</string>
     <string name="disclaimer_text">This app is an independent client and is not affiliated with, endorsed by, or sponsored by Open WebUI Inc.</string>
+    <string name="mic_permission_required">Microphone permission required for voice interactions.</string>
 </resources>

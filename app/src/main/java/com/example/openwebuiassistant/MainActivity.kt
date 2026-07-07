@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Switch
+import com.google.android.material.switchmaterial.SwitchMaterial
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         val urlEditText = findViewById<TextInputEditText>(R.id.urlEditText)
-        val fullScreenSwitch = findViewById<Switch>(R.id.fullScreenSwitch)
-        val autoDictateSwitch = findViewById<Switch>(R.id.autoDictateSwitch)
-        val autoVoiceCallSwitch = findViewById<Switch>(R.id.autoVoiceCallSwitch)
+        val fullScreenSwitch = findViewById<SwitchMaterial>(R.id.fullScreenSwitch)
+        val autoDictateSwitch = findViewById<SwitchMaterial>(R.id.autoDictateSwitch)
+        val autoVoiceCallSwitch = findViewById<SwitchMaterial>(R.id.autoVoiceCallSwitch)
         val saveButton = findViewById<Button>(R.id.saveButton)
 
         urlEditText.setText(prefs.getString(KEY_URL, DEFAULT_URL))

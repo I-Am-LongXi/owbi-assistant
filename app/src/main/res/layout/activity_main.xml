@@ -31,21 +31,21 @@
             android:inputType="textUri" />
     </com.google.android.material.textfield.TextInputLayout>
     
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/fullScreenSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/full_screen_mode" />
         
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/autoDictateSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/auto_dictate_mode" />
         
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/autoVoiceCallSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

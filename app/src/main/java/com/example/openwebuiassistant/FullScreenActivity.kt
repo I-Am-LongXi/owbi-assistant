@@ -10,14 +10,25 @@ import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
 class FullScreenActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
-    private val RECORD_AUDIO_REQUEST_CODE = 101
+    private var pendingPermissionRequest: PermissionRequest? = null
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        if (isGranted) {
+            pendingPermissionRequest?.let { it.grant(it.resources) }
+        } else {
+            pendingPermissionRequest?.deny()
+        }
+        pendingPermissionRequest = null
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,19 +77,25 @@ class FullScreenActivity : AppCompatActivity() {
                 view?.evaluateJavascript("""
                     (function() {
                         if (window.__voiceAutoStarted) return;
-                        var attempts = 0;
-                        var checkExist = setInterval(function() {
+                        
+                        function clickVoiceBtn() {
                             var voiceBtn = document.querySelector($selector);
                             if (voiceBtn) {
                                 window.__voiceAutoStarted = true;
                                 voiceBtn.click();
-                                clearInterval(checkExist);
+                                return true;
                             }
-                            attempts++;
-                            if (attempts > 20) {
-                                clearInterval(checkExist); // Stop after 10 seconds
-                            }
-                        }, 500);
+                            return false;
+                        }
+
+                        if (!clickVoiceBtn()) {
+                            var observer = new MutationObserver(function(mutations, obs) {
+                                if (clickVoiceBtn()) {
+                                    obs.disconnect();
+                                }
+                            });
+                            observer.observe(document.body, { childList: true, subtree: true });
+                        }
                     })();
                 """.trimIndent(), null)
             }
@@ -89,12 +106,15 @@ class FullScreenActivity : AppCompatActivity() {
                 if (ContextCompat.checkSelfPermission(this@FullScreenActivity, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
                     request.grant(request.resources)
                 } else {
-                    ActivityCompat.requestPermissions(this@FullScreenActivity, arrayOf(Manifest.permission.RECORD_AUDIO), RECORD_AUDIO_REQUEST_CODE)
-                    // Note: In a robust app, we would cache the request and grant it in onRequestPermissionsResult
-                    // For simplicity, we just deny the initial request if permissions are missing and ask the user to try again.
-                    request.deny() 
+                    pendingPermissionRequest = request
+                    requestPermissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
                 }
             }
         }
+    }
+
+    override fun onDestroy() {
+        webView.destroy()
+        super.onDestroy()
     }
 }
