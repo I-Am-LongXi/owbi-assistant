@@ -45,6 +45,7 @@ When making future changes, AI agents must strictly adhere to the following vers
   * Use the Conventional Commits format (e.g., `feat:`, `fix:`, `refactor:`, `docs:`, `chore:`).
   * The subject line must be a concise summary (under 50 characters).
   * The body must provide a detailed explanation of *why* the change was made, what files were touched, and any side-effects or considerations for future agents.
+  * **Tone:** Write commit messages from the perspective of a human developer. Do not break the fourth wall with phrases like "as requested by the user" or "the user wanted". Keep it professional and focused entirely on the codebase.
 * **Branching (Optional but Recommended):** For large features, create a separate branch rather than committing directly to `master`.
 
 ### 7. App Versioning

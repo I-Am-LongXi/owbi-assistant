@@ -36,3 +36,6 @@ Please refer to the [Privacy Policy](PRIVACY_POLICY.md) for details on how data 
 
 ## Disclaimer
 This application is an independent client designed to interface with the Open WebUI software. It is not affiliated with, endorsed by, or sponsored by Open WebUI Inc.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
